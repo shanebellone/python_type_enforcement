@@ -3,7 +3,7 @@ import typing
 
 def enforce_type(func):
     def wrapper_func(*args):
-        # Get type hints from decorated func
+        # Get type hints from decorated function
         expected_types = typing.get_type_hints(func)
         # Build dictionary with comprehension with if evaluation
         type_errors = {arg: expected for arg, expected in zip(args, expected_types.values()) if type(arg) != expected}
