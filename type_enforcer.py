@@ -25,4 +25,5 @@ def test_func(word: str, number: int):
 
 
 if __name__ == '__main__':
+    # Whoops! The second argument should be an integer. Change "there" to 1 and run again.
     test_func("hello", "there")
