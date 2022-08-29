@@ -1,4 +1,4 @@
 # python_type_enforcer
-Type Enforcement Skeleton
+Enforce Python Type Hints
 
 Basic type enforcer for type hints with example.
