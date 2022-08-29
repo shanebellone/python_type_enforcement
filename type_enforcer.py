@@ -10,7 +10,7 @@ def enforce_type(func):
         # Check for errors
         if len(type_errors) == 0:
             # If types match, return decorated function
-            func(*args)
+            return func(*args)
         else:
             # Otherwise, raise TypeError
             error = "\tCheck {func}{args}: \t{errors}".format(func=func.__name__, args=args, errors=type_errors)
@@ -20,10 +20,11 @@ def enforce_type(func):
 
 
 @enforce_type
-def test_func(word: str, number: int):
-    print(word, number)
+def test_func(a: int, b: int):
+    return a + b
 
 
 if __name__ == '__main__':
-    # Whoops! The second argument should be an integer. Change "there" to 1 and run again.
-    test_func("hello", "there")
+    # Whoops! The second argument should be an integer. Change "2" to 2 and run again.
+    summed = test_func(1, "2")
+    print(summed)
