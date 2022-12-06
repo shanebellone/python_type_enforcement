@@ -15,7 +15,6 @@ def enforce_type(func):
             # Otherwise, raise TypeError
             error = "\tCheck {func}{args}: \t{errors}".format(func=func.__name__, args=args, errors=type_errors)
             raise TypeError(error)
-
     return wrapper_func
 
 
